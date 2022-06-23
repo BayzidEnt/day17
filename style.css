@@ -1,0 +1,101 @@
+.maindiv {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .button{
+    display: inline-block;
+  }
+  .button-class {
+    font-size: 30px;
+    text-decoration: none;
+    background: #3498db;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    position: relative; 
+    z-index: 1;
+  } 
+  .button-class::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    border-radius: 10px;
+    background: red; 
+    transition: .4s;
+    z-index: -1;
+  }
+  .button-class:hover::after{
+    
+    height: 100%;
+  } 
+  /*button right*/ 
+
+  .button-right{
+    font-size: 30px;
+    text-decoration: none;
+    background: #3498db;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px; 
+    position: relative;
+    z-index: 1;
+  }
+  .button-right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0%;
+    background: red;
+    border-radius: 10px; 
+    transition: .4s; 
+    z-index: -1;
+  } 
+  .button-right:hover::after{
+    width: 100%;
+  }
+
+  .button-bottom{
+    font-size: 30px;
+    text-decoration: none;
+    background: #3498db;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px; 
+    position: relative;
+    z-index: 1;
+  }
+  .button-bottom::after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background: red;
+    border-radius: 10px;  
+    position: absolute;
+    z-index: -1;
+    transition: .4s;
+  }
+  .button-bottom:hover::after{
+    height: 100%;
+  } 
+
+  /*bordder list */ 
+  ul{
+    list-style: none;
+  } 
+  li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 20px;
+    color: red;
+  }
